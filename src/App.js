@@ -9,6 +9,7 @@ import Button from './components/Button'
 import attackOptionsList from './data/attackOptionsList'
 import namesList from './data/namesList'
 
+
 export default function App() {
   /* Challenge
 
@@ -52,8 +53,22 @@ export default function App() {
     ⚠️ ️Kodunuzu yukarıya yazın. Aşağıdaki kod değiştirilmemelidir ⚠️
     
     --------------------------------------------------------------------*/
+const [characterData,setCharacterData]=useState({
+  hat:true,
+  shield:true,
+  weapon:'sword',
+  name:'Namik',
+  attackOptions:attackOptionsList.slice(0,6),
+  stats:{
+    hp:10,
+    mp:20,
+    strength:30,
 
-    
+  }
+})
+
+
+
   let dataToUse, functionToUse
 
   if (typeof characterData !== 'undefined') {
